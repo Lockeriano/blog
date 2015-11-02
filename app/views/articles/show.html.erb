@@ -1,0 +1,21 @@
+<center><h3><i>
+  <strong>Tytuł:</strong></i><br></h3>
+  <h2><%= @article.title %>
+</h2>
+<h3><b><i>
+  <strong>Treść:</strong></i><br></h3>
+  <h2><%= @article.text %>
+</h2></b>
+ 
+<h2>Komentarze:</h2>
+<%= render @article.comments %>
+ 
+<h2>Dodaj komentarz:</h2>
+<%= render 'comments/form' %>
+ 
+ 
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %> |
+<%= link_to 'Destroy', article_path(@article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></center>
