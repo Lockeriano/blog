@@ -1,0 +1,174 @@
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "abouts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (2.2ms)[0m  CREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "commenter" varchar(255), "body" text, "article_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (3.0ms)[0m  CREATE INDEX "index_comments_on_article_id" ON "comments" ("article_id")
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (2.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151031110322')
+  [1m[36m (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151030103940')[0m
+  [1m[35m (2.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151027104355')
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Unable to load about, underlying cause No such file to load -- about 
+
+ /usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `block in require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:214:in `load_dependency'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:330:in `require_or_load'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:289:in `depend_on'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:207:in `require_dependency'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `each'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:768:in `fixtures'
+/home/patryk/projects/blog/test/test_helper.rb:12:in `<class:TestCase>'
+/home/patryk/projects/blog/test/test_helper.rb:5:in `<top (required)>'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `block in require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:214:in `load_dependency'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `require'
+/home/patryk/projects/blog/test/helpers/about_helper_test.rb:1:in `<top (required)>'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `block in require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:214:in `load_dependency'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `require'
+/usr/lib/ruby/vendor_ruby/rails/test_unit/sub_test_task.rb:73:in `block (3 levels) in define'
+/usr/lib/ruby/vendor_ruby/rails/test_unit/sub_test_task.rb:73:in `each'
+/usr/lib/ruby/vendor_ruby/rails/test_unit/sub_test_task.rb:73:in `block (2 levels) in define'
+/usr/lib/ruby/vendor_ruby/rails/test_unit/sub_test_task.rb:72:in `each'
+/usr/lib/ruby/vendor_ruby/rails/test_unit/sub_test_task.rb:72:in `block in define'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:240:in `call'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:240:in `block in execute'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:235:in `each'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:235:in `execute'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:179:in `block in invoke_with_call_chain'
+/usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:172:in `invoke_with_call_chain'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:201:in `block in invoke_prerequisites'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:199:in `each'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:199:in `invoke_prerequisites'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:178:in `block in invoke_with_call_chain'
+/usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:172:in `invoke_with_call_chain'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:165:in `invoke'
+/usr/lib/ruby/vendor_ruby/rails/test_unit/testing.rake:61:in `block in <top (required)>'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:240:in `call'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:240:in `block in execute'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:235:in `each'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:235:in `execute'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:179:in `block in invoke_with_call_chain'
+/usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:172:in `invoke_with_call_chain'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:201:in `block in invoke_prerequisites'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:199:in `each'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:199:in `invoke_prerequisites'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:178:in `block in invoke_with_call_chain'
+/usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:172:in `invoke_with_call_chain'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:165:in `invoke'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:150:in `invoke_task'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:106:in `block (2 levels) in top_level'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:106:in `each'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:106:in `block in top_level'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:115:in `run_with_threads'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:100:in `top_level'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:78:in `block in run'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:176:in `standard_exception_handling'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:75:in `run'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/bin/rake:33:in `<top (required)>'
+/usr/local/bin/rake:23:in `load'
+/usr/local/bin/rake:23:in `<main>'
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-31 11:26:22', '2015-10-31 11:26:22', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-31 11:26:22', '2015-10-31 11:26:22', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "abouts"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "abouts" () VALUES ()
+SQLite3::SQLException: near ")": syntax error: INSERT INTO "abouts" () VALUES ()
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "text" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (3.0ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "commenter" varchar(255), "body" text, "article_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (2.9ms)[0m  [1mCREATE INDEX "index_comments_on_article_id" ON "comments" ("article_id")[0m
+  [1m[35m (4.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (3.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (3.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151031110322')[0m
+  [1m[35m (3.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151030103940')
+  [1m[36m (3.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151027104355')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Unable to load about, underlying cause No such file to load -- about 
+
+ /usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `block in require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:214:in `load_dependency'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:330:in `require_or_load'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:289:in `depend_on'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:207:in `require_dependency'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `each'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.2/lib/active_record/fixtures.rb:768:in `fixtures'
+/home/patryk/projects/blog/test/test_helper.rb:12:in `<class:TestCase>'
+/home/patryk/projects/blog/test/test_helper.rb:5:in `<top (required)>'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `block in require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:214:in `load_dependency'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `require'
+/home/patryk/projects/blog/test/helpers/about_helper_test.rb:1:in `<top (required)>'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `block in require'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:214:in `load_dependency'
+/usr/lib/ruby/vendor_ruby/active_support/dependencies.rb:229:in `require'
+/usr/lib/ruby/vendor_ruby/rails/test_unit/sub_test_task.rb:73:in `block (3 levels) in define'
+/usr/lib/ruby/vendor_ruby/rails/test_unit/sub_test_task.rb:73:in `each'
+/usr/lib/ruby/vendor_ruby/rails/test_unit/sub_test_task.rb:73:in `block (2 levels) in define'
+/usr/lib/ruby/vendor_ruby/rails/test_unit/sub_test_task.rb:72:in `each'
+/usr/lib/ruby/vendor_ruby/rails/test_unit/sub_test_task.rb:72:in `block in define'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:240:in `call'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:240:in `block in execute'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:235:in `each'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:235:in `execute'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:179:in `block in invoke_with_call_chain'
+/usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:172:in `invoke_with_call_chain'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:201:in `block in invoke_prerequisites'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:199:in `each'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:199:in `invoke_prerequisites'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:178:in `block in invoke_with_call_chain'
+/usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:172:in `invoke_with_call_chain'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:165:in `invoke'
+/usr/lib/ruby/vendor_ruby/rails/test_unit/testing.rake:61:in `block in <top (required)>'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:240:in `call'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:240:in `block in execute'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:235:in `each'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:235:in `execute'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:179:in `block in invoke_with_call_chain'
+/usr/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:172:in `invoke_with_call_chain'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/task.rb:165:in `invoke'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:150:in `invoke_task'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:106:in `block (2 levels) in top_level'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:106:in `each'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:106:in `block in top_level'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:115:in `run_with_threads'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:100:in `top_level'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:78:in `block in run'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:176:in `standard_exception_handling'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/lib/rake/application.rb:75:in `run'
+/var/lib/gems/1.9.1/gems/rake-10.4.2/bin/rake:33:in `<top (required)>'
+/usr/local/bin/rake:23:in `load'
+/usr/local/bin/rake:23:in `<main>'
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "comments"[0m
+  [1m[35mFixture Insert (1.4ms)[0m  INSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-31 17:05:28', '2015-10-31 17:05:28', 980190962)
+  [1m[36mFixture Insert (2.6ms)[0m  [1mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-31 17:05:28', '2015-10-31 17:05:28', 298486374)[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "abouts"
+SQLite3::SQLException: no such table: abouts: DELETE FROM "abouts"
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
